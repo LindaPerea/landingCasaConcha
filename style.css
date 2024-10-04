@@ -163,29 +163,6 @@ header p {
 
 
 /* Contenedor del precio centrado */
-#property-price-container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    margin: 20px 0; /* Espacio arriba y abajo */
-}
-
-/* Estilos para la sección de precio */
-.property-price {
-    background-color: #007bff; /* Color de fondo del precio */
-    color: #ffffff; /* Color del texto */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el precio */
-    font-size: 2rem; /* Tamaño de la fuente del precio */
-    font-weight: bold; /* Negrita para el precio */
-    text-align: center; /* Alineación del texto en el centro */
-    width: 300px; /* Ancho específico del div del precio */
-    max-width: 90%; /* Limita el ancho al 90% del contenedor padre en pantallas más pequeñas */
-}
-
-.container-descripcion {
-    display: flex;
-}
 
 .parrafo-texto-descripcion {
     width: 50%;
@@ -394,6 +371,12 @@ header p {
 
 
 /* Navbar */
+
+.logo {
+    width: 10%;
+    margin: 0;
+    padding: 0;
+}
 .navbar {
     background-color: #007bff; /* Color de fondo del navbar */
     padding: 10px 20px;
