@@ -1,0 +1,479 @@
+/* styles.css */
+body {
+      font-family: 'Poppins', sans-serif;
+
+}
+
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.slider img {
+    width: 100%;
+    border-bottom: 5px solid #333;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider .prev {
+    left: 10px;
+}
+
+.slider .next {
+    right: 10px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.feature-item p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #333;
+}
+
+.details {
+    text-align: center;
+    padding: 20px;
+    
+    
+    width: 50%;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.box-details {
+    display: flex;
+}
+
+#price {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin: 20px 0; /* Espacio arriba y abajo */
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    
+    
+      background-color: #007bff; /* Color de fondo del precio */
+    
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el precio */
+    
+    text-align: center; /* Alineación del texto en el centro */
+    width: 300px; /* Ancho específico del div del precio */
+    max-width: 90%; /* Limita el ancho al 90% del contenedor padre en pantallas más pequeñas */
+}
+
+.details p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+/* Estilos para las flechas de navegación */
+.main-slider-button-next,
+.main-slider-button-prev {
+    color: #000; /* Color de las flechas */
+}
+
+
+
+/* Contenedor del precio centrado */
+#property-price-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin: 20px 0; /* Espacio arriba y abajo */
+}
+
+/* Estilos para la sección de precio */
+.property-price {
+    background-color: #007bff; /* Color de fondo del precio */
+    color: #ffffff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el precio */
+    font-size: 2rem; /* Tamaño de la fuente del precio */
+    font-weight: bold; /* Negrita para el precio */
+    text-align: center; /* Alineación del texto en el centro */
+    width: 300px; /* Ancho específico del div del precio */
+    max-width: 90%; /* Limita el ancho al 90% del contenedor padre en pantallas más pequeñas */
+}
+
+.container-descripcion {
+    display: flex;
+}
+
+.parrafo-texto-descripcion {
+    width: 50%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+.parrafo-carga-descripcion {
+    width: 50%;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    .property-price {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        padding: 15px; /* Ajuste del espaciado interno */
+        width: 250px; /* Ancho específico para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .property-price {
+        font-size: 1.2rem; /* Tamaño de fuente aún más pequeño en pantallas muy pequeñas */
+        padding: 10px; /* Ajuste adicional del espaciado interno */
+        width: 200px; /* Ancho específico para pantallas muy pequeñas */
+    }
+}
+
+
+/* Estilos para el formulario */
+.appointment-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.appointment-form h2 {
+    margin-bottom: 20px;
+}
+
+.appointment-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.appointment-form input,
+.appointment-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.appointment-form button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.appointment-form button:hover {
+    background-color: #218838;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .swiper-container.main-slider, .swiper-container.thumbnail-slider {
+        height: auto;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+
+/* Botones de Redes Sociales (lado derecho) */
+.floating-social-buttons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-social-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de los íconos */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.floating-social-buttons a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+}
+
+/* Botones de WhatsApp y Agendar Cita (esquina inferior derecha) */
+.floating-action-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-action-buttons a,
+.floating-action-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Color de fondo predeterminado */
+    color: #fff; /* Color del texto y el ícono */
+    border-radius: 50%; /* Botones circulares */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem; /* Tamaño del ícono */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.floating-action-buttons a:hover,
+.floating-action-buttons button:hover {
+    background-color: #555;
+}
+
+/* Estilos específicos para el botón de "Agendar Cita" */
+#schedule-button {
+    background-color: #007bff; /* Color de fondo para el botón Agendar Cita */
+    width: auto;
+    height: auto;
+    padding: 10px 20px; /* Ajuste de tamaño */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#schedule-button:hover {
+    background-color: #218838; /* Color de fondo al pasar el ratón */
+}
+
+
+/* Formulario de Agendar Cita */
+.appointment-form {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    border-radius: 8px 8px 0 0;
+}
+
+.appointment-form h2 {
+    margin-top: 0;
+}
+
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointment-form form label {
+    margin: 5px 0;
+}
+
+.appointment-form form input,
+.appointment-form form button {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.appointment-form form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.appointment-form form button:hover {
+    background-color: #218838;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #007bff; /* Color de fondo del navbar */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    top: 0;
+    z-index: 1002; /* Asegura que esté encima del resto del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo a {
+    color: #fff; /* Color del logo */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a, 
+.navbar-links button {
+    color: #fff; /* Color de los enlaces */
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+    border: none; /* Remueve el borde del botón */
+    cursor: pointer;
+    background: none; /* Fondo transparente */
+}
+
+.navbar-links a:hover,
+.navbar-links button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo al pasar el ratón */
+    border-radius: 5px;
+}
+
+.navbar-toggle {
+    display: none; /* Oculto por defecto */
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Ocultar links por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Alinea debajo del navbar */
+        right: 0;
+        background-color: #333; /* Fondo de los links desplegados */
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-links.show {
+        display: flex; /* Mostrar links cuando se activa */
+    }
+
+    .navbar-toggle {
+        display: block; /* Mostrar botón para dispositivos móviles */
+    }
+
+    .navbar-links a, 
+    .navbar-links button {
+        padding: 10px 20px;
+        width: 100%; /* Ancho completo en dispositivos móviles */
+    }
+}
+
+
+

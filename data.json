@@ -1,0 +1,42 @@
+{
+    "title": "Venta de Casa - Partido Alto",
+    "subtitle": "Ideal para: vivienda, negocio o inversión",
+    "images": [
+        {
+            "src": "images/fachadaCasaConcha.png",
+            "alt": "Fachada de la casa"
+        },
+        {
+            "src": "images/terrazaCasaConcha.png",
+            "alt": "Terraza de la casa"
+        },
+        {
+            "src": "images/casaPartidoAlto3.png",
+            "alt": "Interior de la casa"
+        }
+    ],
+    "features": [
+        {
+            "icon": "fa-bed",
+            "label": "Hab.",
+            "value": "4"
+        },
+        {
+            "icon": "fa-bath",
+            "label": "Baños",
+            "value": "5"
+        },
+        {
+            "icon": "fa-ruler-combined",
+            "label": "Área",
+            "value": "228 m²"
+        },
+        {
+            "icon": "fa-car",
+            "label": "Garaje",
+            "value": "1"
+        }
+    ],
+    "price": "S/. 630,000",
+    "description": "Cuenta con aire acondicionado, jardín interior y exterior, amplios ambientes, lavanderia y está ubicado en zona residencial con acceso a las principales calles de la ciudad de Tarapoto."
+}
