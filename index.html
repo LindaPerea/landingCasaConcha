@@ -1,124 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replica de Página</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Replica de Página</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
 
-    <link rel="stylesheet" href="style.css"> <!-- Tu archivo CSS -->
-</head>
-<body>
-    
-     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <!-- Puedes reemplazar el texto con una imagen si lo prefieres -->
-                <img src="images/logo_chris-removebg-preview.png" alt="naca" class="logo">
-            </div>
-            <div class="navbar-links" id="navbar-links">
-                <a href="https://www.inmobiliariacya.com/">Inicio</a>
-                <a href="#features">Características</a>
-                <a href="#price">Precios</a>
-                <a href="#contact">Contacto</a>
-                <button id="schedule-button-mobile">Agendar Cita</button> <!-- Botón Agendar Cita -->
-            </div>
-            <div class="navbar-toggle" id="navbar-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-    
+        <link rel="stylesheet" href="style.css" />
+        <!-- Tu archivo CSS -->
+    </head>
+    <body onscroll="scroll">
+        <!-- Navbar -->
+        <header class="header">
+            <img
+                src="images/logo_chris-removebg-preview.png"
+                alt="naca"
+                class="logo"
+            />
 
-<div class="container">
-        <header>
-            <h1 id="title"></h1>
-            <p id="subtitle"></p>
+            <nav class="navbar">
+                <ul class="navbar-items">
+                    <li>
+                        <a href="https://www.inmobiliariacya.com/">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#features">Características</a>
+                    </li>
+                    <li>
+                        <a href="#price">Precios</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contacto</a>
+                    </li>
+                    <li>
+                        <button id="schedule-button-mobile">
+                            Agendar Cita
+                        </button>
+                    </li>
+                </ul>
+                <div class="navbar-toggle navbar-closed">
+                    <i onclick="navbarToggle()" class="fa-solid fa-xmark"></i>
+                </div>
+            </nav>
+            <div class="navbar-toggle">
+                <i onclick="navbarToggle()" class="fas fa-bars"></i>
+            </div>
         </header>
 
-        <!-- Slider de imágenes -->
-        <div class="slider" id="slider">
-            <img src="" alt="" id="slider-image" class="slider-img">
-            <button class="prev" id="prev">&lt;</button>
-            <button class="next" id="next">&gt;</button>
-        </div>
+        <div class="container">
+            <header>
+                <h1 id="title"></h1>
+                <p id="subtitle"></p>
+            </header>
 
-        <!-- Features -->
-        <div class="features" id="features">
-            <!-- Se llenará dinámicamente -->
-        </div>
-
-
-        <!-- Precio y descripción -->
-         <div class="box-details">
-            
-             <div><p id="price"></p></div>
-             <div class="details">            
-                 <p id="description"></p>
+            <!-- Slider de imágenes -->
+            <div class="slider" id="slider">
+                <img src="" alt="" id="slider-image" class="slider-img" />
+                <button class="prev" id="prev">&lt;</button>
+                <button class="next" id="next">&gt;</button>
             </div>
-                
+
+            <!-- Features -->
+            <div class="features" id="features">
+                <!-- Se llenará dinámicamente -->
+            </div>
+
+            <!-- Precio y descripción -->
+            <div class="box-details">
+                <div><p id="price"></p></div>
+                <div class="details">
+                    <p id="description"></p>
+                </div>
+            </div>
         </div>
-</div>
- 
 
+        <!-- Botones flotantes de redes sociales (lado derecho) -->
+        <div class="floating-social-buttons">
+            <a
+                href="https://www.facebook.com/CoryInmobiliaria"
+                target="_blank"
+                class="floating-button facebook"
+                title="Facebook"
+                rel="noopener"
+            >
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+                href="https://www.instagram.com/cory_inmobiliaria/"
+                target="_blank"
+                class="floating-button instagram"
+                title="Instagram"
+                rel="noopener"
+            >
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a
+                href="https://www.tiktok.com/@tu-pagina"
+                target="_blank"
+                class="floating-button tiktok"
+                title="TikTok"
+                rel="noopener"
+            >
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+                href="https://www.youtube.com/channel/tu-canal"
+                target="_blank"
+                class="floating-button youtube"
+                title="YouTube"
+                rel="noopener"
+            >
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
 
-    <!-- Botones flotantes de redes sociales (lado derecho) -->
-<div class="floating-social-buttons">
-    <a href="https://www.facebook.com/CoryInmobiliaria" target="_blank" class="floating-button facebook" title="Facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/cory_inmobiliaria/" target="_blank" class="floating-button instagram" title="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.tiktok.com/@tu-pagina" target="_blank" class="floating-button tiktok" title="TikTok">
-        <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://www.youtube.com/channel/tu-canal" target="_blank" class="floating-button youtube" title="YouTube">
-        <i class="fab fa-youtube"></i>
-    </a>
-</div>
+        <!-- Botón de WhatsApp y Agendar Cita (esquina inferior derecha) -->
+        <div class="floating-action-buttons">
+            <a
+                href="https://wa.me/51990645017"
+                target="_blank"
+                class="floating-button whatsapp"
+                title="WhatsApp"
+                rel="noopener"
+            >
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <button id="schedule-button">Agendar Visita</button>
+        </div>
 
-<!-- Botón de WhatsApp y Agendar Cita (esquina inferior derecha) -->
-<div class="floating-action-buttons">
-    <a href="https://wa.me/51990645017" target="_blank" class="floating-button whatsapp" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <button id="schedule-button">Agendar Visita</button>
-</div>
+        <!-- Formulario de Agendar Cita -->
+        <div class="appointment-form">
+            <h2>Agendar Cita</h2>
+            <form action="schedule_appointment.php" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required />
 
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
 
+                <label for="phone">Teléfono:</label>
+                <input type="text" id="phone" name="phone" required />
 
-    
-    
-    <!-- Formulario de Agendar Cita -->
-    <div class="appointment-form">
-        <h2>Agendar Cita</h2>
-        <form action="schedule_appointment.php" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required />
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required />
 
-            <label for="phone">Teléfono:</label>
-            <input type="text" id="phone" name="phone" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
 
-            <label for="date">Fecha:</label>
-            <input type="date" id="date" name="date" required>
-
-            <label for="time">Hora:</label>
-            <input type="time" id="time" name="time" required>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-    
-    
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script> <!-- Tu archivo JS -->
-</body>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+        <!-- Tu archivo JS -->
+    </body>
 </html>

@@ -87,12 +87,10 @@ window.addEventListener('click', (event) => {
 
 
 // Mostrar/Ocultar el menú en dispositivos móviles
-const navbarToggle = document.getElementById('navbar-toggle');
-const navbarLinks = document.getElementById('navbar-links');
-
-navbarToggle.addEventListener('click', () => {
+const navbarLinks = document.querySelector('.navbar');
+const navbarToggle = () => {
     navbarLinks.classList.toggle('show');
-});
+};
 
 // Mostrar/Ocultar el formulario al hacer clic en "Agendar Cita" (botón en el navbar móvil)
 const scheduleButtonMobile = document.getElementById('schedule-button-mobile');
@@ -109,6 +107,14 @@ scheduleButtonMobile.addEventListener('click', () => {
 });
 
 
+// Mostrar/Ocultar el fondo de header
 
+function scrollWindow() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    return document.querySelector(".header").classList.add("show");
+  }
+  document.querySelector(".header").classList.remove("show");
+}
+window.onscroll = function() {scrollWindow()};
 
 

@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
@@ -370,44 +371,42 @@ header p {
 }
 
 
-/* Navbar */
+/* Header */
 
 .logo {
     width: 10%;
     margin: 0;
     padding: 0;
 }
-.navbar {
-    background-color: #007bff; /* Color de fondo del navbar */
+.header {
+    /* color de header */
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     padding: 15px;
+    left: 0;
     top: 0;
     z-index: 1002; /* Asegura que esté encima del resto del contenido */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s;
+}
+.header.show {
+    background-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-logo a {
-    color: #fff; /* Color del logo */
-    font-size: 24px;
-    text-decoration: none;
-}
 
-.navbar-links {
+.header .navbar ul{
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
-.navbar-links a, 
-.navbar-links button {
-    color: #fff; /* Color de los enlaces */
+.navbar a, 
+.navbar button {
+    color: black; /* Color de los enlaces */
     text-decoration: none;
     padding: 8px 16px;
     transition: background-color 0.3s ease;
@@ -416,34 +415,53 @@ header p {
     background: none; /* Fondo transparente */
 }
 
-.navbar-links a:hover,
-.navbar-links button:hover {
+.header.show .navbar a,
+.header.show .navbar button{
+    color: #fff; /* Color de los enlaces */
+}
+
+.navbar a:hover,
+.navbar button:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Fondo al pasar el ratón */
     border-radius: 5px;
 }
 
 .navbar-toggle {
+    color: black;
     display: none; /* Oculto por defecto */
-    color: #fff;
     font-size: 24px;
     cursor: pointer;
+}
+.header.show .navbar-toggle{
+    color: #fff;
+}
+.navbar-toggle.navbar-closed {
+    color: #fff;
+    position: absolute;
+    font-size: 35px;
+    right: 0;
+    top: 0;
+    padding: 20px;
 }
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
-    .navbar-links {
-        display: none; /* Ocultar links por defecto */
-        flex-direction: column;
-        position: absolute;
-        top: 50px; /* Alinea debajo del navbar */
-        right: 0;
-        background-color: #333; /* Fondo de los links desplegados */
+    .navbar {
         width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        display: none; /* Ocultar links por defecto */
+        background-color: rgba(51, 51, 51, 0.8); /* Fondo de los links desplegados */
+        position: fixed;
+        top: 0; /* Alinea debajo del navbar */
+        right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar ul{
+        flex-direction: column;
     }
 
-    .navbar-links.show {
+    .navbar.show {
         display: flex; /* Mostrar links cuando se activa */
     }
 
@@ -451,8 +469,8 @@ header p {
         display: block; /* Mostrar botón para dispositivos móviles */
     }
 
-    .navbar-links a, 
-    .navbar-links button {
+    .navbar a, 
+    .navbar button {
         padding: 10px 20px;
         width: 100%; /* Ancho completo en dispositivos móviles */
     }
