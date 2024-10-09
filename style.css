@@ -33,6 +33,7 @@ header {
 }
 
 header h1 {
+    padding-top: 80px;
     font-size: 2.5rem;
     color: #333;
 }
@@ -111,6 +112,16 @@ header p {
 
 .box-details {
     display: flex;
+    
+}
+
+@media (max-width: 768px) {
+    .box-details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-right: 0;
+    }
 }
 
 #price {
@@ -393,7 +404,7 @@ header p {
     transition: all 0.5s;
 }
 .header.show {
-    background-color: #007bff;
+    background-color: #0054a6; /*#004284;*/
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -478,3 +489,106 @@ header p {
 
 
 
+ /* Estilos del footer */
+        footer {
+            margin-top:50px;
+            background-color: #0054a6;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .footer-links ul li {
+            margin-right: 20px;
+        }
+
+        .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #00bcd4;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-bottom p {
+            color: #bbb;
+        }
+
+        /* Media Queries para dispositivos móviles */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links ul {
+                margin-bottom: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-links ul li {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-logo h2 {
+                font-size: 20px;
+            }
+
+            .social-icon img {
+                width: 25px;
+                height: 25px;
+            }
+        }
